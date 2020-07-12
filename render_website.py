@@ -25,11 +25,12 @@ def on_reload():
 
 
 class Book(object):
-    def __init__(self, book_path, image_path, title, author):
+    def __init__(self, book_path, image_path, title, author, genres):
         self.book_path = book_path
         self.image_path = image_path
         self.title = title
         self.author = author
+        self.genres = genres
 
 
 with open('books.json', 'r', encoding='utf-8') as my_file:
@@ -45,7 +46,8 @@ books = [
             path='/'.join(map(str, book["image_src"].split('\\')[-2:]))
         ),
         book["title"],
-        book["author"]
+        book["author"],
+        book["genres"]
     )
     for book in parsed_books
 ]
