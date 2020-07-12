@@ -14,7 +14,12 @@ def on_reload():
     template = env.get_template('template.html')
     os.makedirs('pages', exist_ok=True)
     for page_num, page_books_pairs in enumerate(books_pairs_split):
-        rendered_page = template.render(books=books, books_pairs=page_books_pairs)
+        rendered_page = template.render(
+            books=books,
+            books_pairs=page_books_pairs,
+            pages=pages_quantity,
+            current_page=page_num + 1
+        )
         with open(f'pages/index{page_num + 1}.html', 'w', encoding="utf8") as file:
             file.write(rendered_page)
 
@@ -48,6 +53,7 @@ books = [
 pairs_divider = 10
 books_pairs = list(chunked(books, 2))
 books_pairs_split = list(chunked(books_pairs, pairs_divider))
+pages_quantity = len(books_pairs_split)
 
 on_reload()
 
