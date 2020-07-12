@@ -123,10 +123,5 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
-
-books/
-images/
 books.json
-index.html
 .idea/
-pages/

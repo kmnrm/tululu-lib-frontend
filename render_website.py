@@ -39,10 +39,10 @@ parsed_books = json.loads(parsed_books)
 
 books = [
     Book(
-        '../{path}'.format(
+        '../static/{path}'.format(
             path='/'.join(map(str, book["book_path"].split('\\')[-2:]))
         ),
-        '../{path}'.format(
+        '../static/{path}'.format(
             path='/'.join(map(str, book["image_src"].split('\\')[-2:]))
         ),
         book["title"],
