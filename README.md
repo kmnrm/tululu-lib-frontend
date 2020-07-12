@@ -22,7 +22,7 @@ To have the site on your machine follow the steps below:
     
     _Notice:_ if you run `render_website.py`, **`livereload`** will probably not interpret `.txt` files properly.
     
-#### Add new books
+### Add new books
 
 You can parse new books using [Tululu book parser](https://github.com/kmnrm/online_library_parser).
 Use **`static`** folder path in your repository as `--dest_folder` [optional parameter](https://github.com/kmnrm/online_library_parser#getting-started). 
@@ -35,3 +35,7 @@ $ python parse_tululu_catogry.py --dest_folder C:\tululu-library-site\static --j
 
 This is a `books.json` file example.
 ![books.json](screenshots/books_json.png)
+
+### Project Goals
+
+The code is written for educational purposes on online-course for web-developers [dvmn.org](https://dvmn.org/).
